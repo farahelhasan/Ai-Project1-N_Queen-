@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="618.0" style="-fx-background-color: #C898D0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aiprojict1.sboard5">
+    <children>
+        <GridPane fx:id="chessBoard" gridLinesVisible="true" layoutX="19.0" layoutY="19.0" prefHeight="389.0" prefWidth="447.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.rowIndex="2" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.rowIndex="4" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="2" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="4" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #896390;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="1" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.rowIndex="3" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            </children>
+        </GridPane>
+      <Text layoutX="499.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" iteration">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="487.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="temperature">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="displayitration" layoutX="476.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.05468702316284" />
+      <Text fx:id="displaytemp" layoutX="476.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="117.05467700958252" />
+      <Button layoutX="489.0" layoutY="163.0" mnemonicParsing="false" onMouseClicked="#genrate5" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #896390; -fx-background-radius: 25;" text="Solve it" />
+      <Label fx:id="solutionLable" layoutX="111.0" layoutY="420.0" prefHeight="36.0" prefWidth="298.0" textAlignment="CENTER" textFill="#fcfafa">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="startButton" layoutX="489.0" layoutY="98.0" mnemonicParsing="false" onAction="#startButtonClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #896390; -fx-background-radius: 25;" text="Start" />
+      <Button fx:id="playAginButton" layoutX="490.0" layoutY="32.0" mnemonicParsing="false" onAction="#playAginButtonClick" prefHeight="36.0" prefWidth="89.0" style="-fx-background-color: #896390; -fx-background-radius: 25;" text="Play again!" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.aiprojict1.homepage">
+    <children>
+        <AnchorPane layoutX="-49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="810.0" style="-fx-background-color: #C898D0;">
+            <children>
+                <AnchorPane prefHeight="618.0" prefWidth="428.0">
+                    <children>
+                        <ImageView fitHeight="543.0" fitWidth="468.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@chess.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="352.0" fitWidth="351.0" layoutX="15.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@chess1.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <Text fill="#f8f8f8" fontSmoothingType="LCD" layoutX="491.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose the size of board:" textAlignment="CENTER" wrappingWidth="224.13671875">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="Size" layoutX="511.0" layoutY="127.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #896390;" />
+                <Text fill="#f8f8f8" fontSmoothingType="LCD" layoutX="476.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select the search algorithm" textAlignment="CENTER" wrappingWidth="255.13671875">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Text>
+                <ChoiceBox fx:id="Salgo" layoutX="511.0" layoutY="209.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: #896390;" />
+                <Button layoutX="507.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#getdata" prefHeight="68.0" prefWidth="194.0" style="-fx-background-radius: 25; -fx-background-color: #896390;" text="start game" textFill="#f8f8f8">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Button>
+                <Text layoutX="539.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N - Queen">
+                    <font>
+                        <Font name="Arial Narrow Bold" size="39.0" />
+                    </font>
+                </Text>
+                <Text fx:id="initaltemp" fontSmoothingType="LCD" layoutX="491.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter initial temperature" textAlignment="CENTER" visible="false" wrappingWidth="224.1367082297802">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="coolrate" layoutX="516.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choicee the cooling rate" textAlignment="CENTER" visible="false">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text fx:id="finaltemp" layoutX="512.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="enter the final temperature" textAlignment="CENTER" visible="false">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <TextField fx:id="textit" layoutX="532.0" layoutY="385.0" style="-fx-background-color: #896390; -fx-background-radius: 25;" visible="false" />
+                <TextField fx:id="textcr" layoutX="535.0" layoutY="504.0" style="-fx-background-color: #896390; -fx-background-radius: 25;" visible="false" />
+                <TextField fx:id="textft" layoutX="535.0" layoutY="574.0" style="-fx-background-color: #896390; -fx-background-radius: 25;" visible="false" />
+                <Button fx:id="submit" layoutX="580.0" layoutY="618.0" mnemonicParsing="false" onMouseClicked="#submitdata" style="-fx-background-color: #896390; -fx-background-radius: 30;" text="submit" visible="false" />
+                <RadioButton fx:id="firstFun" layoutX="468.0" layoutY="440.0" mnemonicParsing="false" onAction="#funSelecte" text="Tc = T * (1-coolrate)" visible="false">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="functions" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="secoundFun" layoutX="637.0" layoutY="440.0" mnemonicParsing="false" onAction="#funSelecte" text="Tc = T - (coolrate* i)" visible="false" />
+                <Text fx:id="tempFunctionLable" layoutX="490.0" layoutY="433.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose the temperature function" textAlignment="CENTER" visible="false">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
